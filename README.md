@@ -33,21 +33,21 @@ click vào Tools chọn NuGet Package Manager sau đó chọn Package Manager Co
 
 Server đang chạy tại địa chỉ: https://localhost:44346
 ##BÁo cáo tiến độ
-13/11//2023- 19/11/2023 
+#13/11//2023- 19/11/2023 
 - Nghiên cứu đề tài.
 - Nghiên cứu Asp.net core MVC framework.
 - Hoàn thành đề cương chi tiết
-27/11/2023 - 03/12/2023
+#27/11/2023 - 03/12/2023
 - Tạo cơ sở dữ liệu.
 - Thiết kế giao diện người dùng, admin.
 - Thiết kế giao diện đăng nhập, đăng ký.
-11/12/2023 - 17/12/2023
+#11/12/2023 - 17/12/2023
 - Tạo giao diện và chức năng đăng nhập, đăng  ký.
 - Tạo giao diện và chức năng thêm, sửa, xóa cho sản phẩm, loại sản phẩm và thẻ tag cho admin.
-25/12/2023 - 31/12/2023
+#25/12/2023 - 31/12/2023
 - Tạo chức năng (lượt truy cập, số lượng đơn hàng, doanh thu theo ngày, tuần, tháng, năm) cho admin.
 - Tạo giao diện và chứ để người dùng có thể xem, chọn và đặt hàng hoa.
-02/01/2024 - 07/01/2024
+#02/01/2024 - 07/01/2024
 - Viết báo cáo.
 - Thiết kế power point
 ## Tham khảo
