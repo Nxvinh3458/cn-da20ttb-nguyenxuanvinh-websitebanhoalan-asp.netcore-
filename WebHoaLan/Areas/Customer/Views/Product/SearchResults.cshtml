@@ -1,0 +1,35 @@
+﻿<!-- Trong Views/Product/SearchResults.cshtml -->
+@model List<Products>
+
+<h2>Kết Quả Tìm Kiếm</h2>
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var product in Model)
+        {
+            <div class="col-4">
+            <div class="card mb-4">
+                <img src="~/@product.Image" alt="Card Image" class="card-img-top" style="height: 300px;"/>
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">
+                        <label>@product.ProductsName</label>
+                    </h4>
+                </div>
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <label ><b>Price : @product.Price</b></label>
+                        </div>
+                        <a asp-action="Detail" asp-controller="Home" asp-route-id="@product.ProductsId" class="btn btn-success pull-right btn-outline-info">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </ul>
+}
+else
+{
+    <p>Không có kết quả tìm kiếm.</p>
+}

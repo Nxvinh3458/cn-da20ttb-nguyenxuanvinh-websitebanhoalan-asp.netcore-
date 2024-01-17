@@ -1,0 +1,62 @@
+﻿@model Order
+
+@{
+    ViewData["Title"] = "Order Statistics";
+}
+
+<h2>Select Date Range:</h2>
+<form id="dateRangeForm">
+    <label for="startDate">From: </label>
+    <input type="text" id="startDate" name="startDate">
+    <label for="endDate">To: </label>
+    <input type="text" id="endDate" name="endDate">
+    <button type="button" onclick="fetchData()">Show Statistics</button>
+</form>
+
+<div id="statistics">
+    <!-- Display statistics table here -->
+    <table id="statisticsTable">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Month</th>
+                <th>Number of Orders</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Statistics rows will be added here dynamically -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(function () {
+        // Initialize datepicker
+        $("#startDate").datepicker();
+        $("#endDate").datepicker();
+    });
+
+    function fetchData() {
+        // Get selected date range
+        var startDate = $("#startDate").val();
+        var endDate = $("#endDate").val();
+
+        // AJAX request to fetch data
+        $.ajax({
+            url: '@Url.Action("GetOrderStatisticsByMonth", "Order")',
+            type: 'POST',
+            data: { startDate: startDate, endDate: endDate },
+            success: function (response) {
+                // Display statistics in the 'statisticsTable'
+                var tableBody = $("#statisticsTable tbody");
+                tableBody.empty(); // Clear existing rows
+
+                // Add rows dynamically
+                $.each(response, function (index, item) {
+                    var row = '<tr><td>' + item.year + '</td><td>' + item.month + '</td><td>' + item.numberOfOrders + '</td></tr>';
+                    tableBody.append(row);
+                });
+            }
+        });
+    }
+</script>
