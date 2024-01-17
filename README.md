@@ -32,7 +32,7 @@ thay đổi tên Server trong chuỗi kết nối tại appsettings.json
 click vào Tools chọn NuGet Package Manager sau đó chọn Package Manager Console và chạy câu lệnh update-database 
 
 Server đang chạy tại địa chỉ: https://localhost:44346
-## BÁo cáo tiến độ
+## Báo cáo tiến độ
 # 13/11//2023- 19/11/2023 
 - Nghiên cứu đề tài.
 - Nghiên cứu Asp.net core MVC framework.
