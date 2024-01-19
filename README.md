@@ -50,6 +50,8 @@ Server đang chạy tại địa chỉ: https://localhost:44346
 # 02/01/2024 - 07/01/2024
 - Viết báo cáo.
 - Thiết kế power point
+- Tạo chức năng tìm kiếm trang chủ của người dùng
+- Tạo chức năng thống kê số lượng đơn hàng cho admin 
 ## Tham khảo
 
 ### Tài liệu Asp.core  https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0
